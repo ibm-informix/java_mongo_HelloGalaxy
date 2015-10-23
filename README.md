@@ -33,8 +33,10 @@ CloudFoundry CLI -  Used to push the application to Bluemix.
  * Step 1: Clone repository to local machine
 
  * Step 2: Use gradle to build a war file.
-	
- * Step 3: Push application to Bluemix using CloudFoundry CLI.
+ 
+ * Step 3: Update the manifest.yml to match the name, host, and domain of your Bluemix application.
+ 
+ * Step 4: Push application to Bluemix using CloudFoundry CLI.
 
 ###Option 2: Run locally
 
