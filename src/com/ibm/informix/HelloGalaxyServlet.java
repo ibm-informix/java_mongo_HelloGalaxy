@@ -2,7 +2,6 @@ package com.ibm.informix;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,11 +28,10 @@ public class HelloGalaxyServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		PrintWriter out = response.getWriter();
 		java_mongo_HelloGalaxy.doEverything();
-		for (String command : java_mongo_HelloGalaxy.commands) {
-			out.print(command + "\n");
+		for (String line : java_mongo_HelloGalaxy.output) {
+			out.print(line + "\n");
 		}
 	}
 
